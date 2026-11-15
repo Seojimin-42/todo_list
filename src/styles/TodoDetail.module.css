@@ -1,0 +1,219 @@
+.detailTitle {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    height: 50px;
+    border: 2px solid #0f172a;
+    border-radius: 16px;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.detailMain {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    min-height: calc(100vh - 60px);
+}
+
+.detailBackground {
+    background-color: #f1f5f9;
+    min-height: calc(100vh - 60px);
+}
+
+.detailInput {
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    font-size: 16px;
+    field-sizing: content;
+    max-width: calc(100% - 48px);
+}
+
+.detailCheckbox {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    transform: translateY(2px);
+}
+
+.detailTitleCompleted {
+    background-color: #ede9fe;
+}
+
+.detailContent {
+    max-width: 996px;
+    margin: 0 auto;
+    padding: 16px 0;
+}
+
+.detailBody {
+    display: flex;
+    gap: 16px;
+    padding-top: 20px;
+    height: 375px;
+}
+
+.imageArea {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 24px;
+    background-color: #f1f5f9;
+    border: 3px dashed #cbd5e1;
+    overflow: hidden;
+}
+
+.imageAreaFilled {
+    border: none;
+}
+
+.imageAddButton {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    background-color: transparent;
+
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageEditButton {
+    background-color: rgba(15, 23, 42, 0.5);
+}
+
+.memoArea {
+    flex: 1;
+    background-image: url("/images/memo/memo.png");
+    background-size: 100% 100%;
+    min-height: 355px;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.memoTitle {
+    color: #92400e;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.memoInputWrapper {
+    margin-top: 16px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.memoInput {
+    border: none;
+    background-color: transparent;
+    width: calc(100% - 25px);
+    height: auto;
+    max-height: 250px;
+    field-sizing: content;
+    text-align: center;
+    padding: 0 20px;
+    resize: none; /* 크기 조절 손잡이 제거 */
+
+    overflow-y: auto;
+    box-sizing: border-box;
+
+    transform: translateY(-30px);
+}
+
+.memoInput::-webkit-scrollbar {
+    width: 8px;
+}
+
+.memoInput::-webkit-scrollbar-thumb {
+  background-color: gold;
+  border-radius: 8px;
+}
+
+.memoImage {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    border-radius: 24px;
+}
+
+.attachedImage {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.detailActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.saveButton {
+    width: 140px;
+    height: 45px;
+    background-color: #e2e8f0;
+    color: #0f172a;
+    border: 2px solid #0f172a;
+    border-radius: 24px;
+    box-shadow: 3px 5px 0 #0f172a;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.deleteButton {
+    width: 140px;
+    height: 45px;
+    background-color: #f43f5e;
+    color: #f1f5f9;
+    border: 2px solid #0f172a;
+    border-radius: 24px;
+    box-shadow: 3px 5px 0 #0f172a;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.saveButtonActive {
+    background-color: #bef264;
+}
+
+/* 테블릿 및 모바일 */
+@media (max-width: 1199px) {
+    .detailMain {
+        padding-inline: 20px;
+    }
+
+    .detailBody {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .imageArea {
+        width: 100%;
+        aspect-ratio: 2 / 1;
+    }
+
+    .detailActions {
+        justify-content: center;
+    }
+}
